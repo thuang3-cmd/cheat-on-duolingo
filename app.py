@@ -6,6 +6,7 @@ Then open: http://127.0.0.1:5000
 """
 
 import asyncio
+import os
 import time
 import httpx
 from flask import Flask, render_template_string, request
@@ -218,4 +219,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host="0.0.0.0", port=port)
