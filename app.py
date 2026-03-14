@@ -78,7 +78,12 @@ HTML = """
     {% else %}
       <label>JWT Token</label>
       <input type="text" name="jwt" placeholder="eyJhbGci..." required>
-      <small>Get it from Chrome → F12 → Application → Cookies → duolingo.com → jwt_token</small>
+      <small>
+        <b>How to get your JWT token:</b><br>
+        🍎 <b>Mac:</b> Open duolingo.com in Chrome → press <b>Cmd + Option + I</b> → Application tab → Cookies → https://www.duolingo.com → copy <b>jwt_token</b><br>
+        🪟 <b>Windows:</b> Open duolingo.com in Chrome → press <b>F12</b> → Application tab → Cookies → https://www.duolingo.com → copy <b>jwt_token</b><br>
+        📱 <b>Mobile:</b> You need a computer to get the token. Log into duolingo.com on a computer first, then follow the Mac or Windows steps above.
+      </small>
     {% endif %}
 
     <button type="submit">Maintain Streak ✓</button>
